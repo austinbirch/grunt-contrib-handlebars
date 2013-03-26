@@ -82,7 +82,7 @@ module.exports = function(grunt) {
 
           // if configured to, wrap template in Handlebars.template call
           if (options.wrapped === true) {
-            compiled = 'Handlebars.template('+compiled+')';
+            compiled = 'module.exports = Handlebars.template('+compiled+')';
           }
 
           if(options.amd && options.namespace === false) {
